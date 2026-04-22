@@ -62,12 +62,13 @@ export function WorldMap({ trips }: { trips: Trip[] }) {
         const color = statusColors[trip.status];
         const icon = L.divIcon({
           className: "custom-marker",
-          html: `<div style="
+          html: `<div data-status="${trip.status}" style="
             width: 14px; height: 14px;
             background: ${color};
             border: 2px solid white;
             border-radius: 50%;
             box-shadow: 0 0 6px ${color}88;
+            transition: opacity 0.3s, transform 0.3s;
           "></div>`,
           iconSize: [14, 14],
           iconAnchor: [7, 7],
@@ -108,19 +109,17 @@ export function WorldMap({ trips }: { trips: Trip[] }) {
     const map = mapInstanceRef.current;
 
     map.eachLayer((layer: any) => {
-      if (layer._icon && layer._icon.querySelector(".custom-marker div")) {
-        const el = layer._icon.querySelector("div");
+      if (layer._icon) {
+        const el = layer._icon.querySelector("[data-status]");
+        if (!el) return;
+        const status = el.getAttribute("data-status");
         if (!filter) {
           el.style.opacity = "1";
           el.style.transform = "scale(1)";
         } else {
-          // Check color to determine status
-          const isMatch = Object.entries(statusColors).some(
-            ([status, color]) =>
-              status === filter && el.style.background === color
-          );
+          const isMatch = status === filter;
           el.style.opacity = isMatch ? "1" : "0.15";
-          el.style.transform = isMatch ? "scale(1.2)" : "scale(0.7)";
+          el.style.transform = isMatch ? "scale(1.3)" : "scale(0.6)";
         }
       }
     });
