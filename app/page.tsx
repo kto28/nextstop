@@ -1,5 +1,6 @@
 import { trips } from "@/lib/trips";
 import { TripCard } from "@/components/TripCard";
+import { WorldMap } from "@/components/WorldMap";
 
 export default function Home() {
   const planned = trips.filter((t) => t.status === "planned");
@@ -70,6 +71,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* World Map */}
+      <WorldMap trips={trips} />
 
       {/* Trip Grid */}
       <section id="trips" className="max-w-6xl mx-auto px-4 sm:px-6 py-16">

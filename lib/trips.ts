@@ -35,6 +35,8 @@ export interface Trip {
   highlights: string[];
   gradient: string;
   bestSeason: string;
+  lat: number;
+  lng: number;
   budget?: string;
   detailDays?: TripDay[];
   stops?: TripStop[];
@@ -58,6 +60,8 @@ export const trips: Trip[] = [
     highlights: ["青海湖", "茶卡鹽湖", "黑獨山", "翡翠湖", "U 型公路"],
     gradient: "from-blue-600 to-cyan-400",
     bestSeason: "6–9 月",
+    lat: 36.62,
+    lng: 101.78,
     budget: "¥4,000–6,000 / 人",
     detailDays: [
       {
@@ -156,6 +160,8 @@ export const trips: Trip[] = [
     highlights: ["藍湖溫泉", "黃金圈", "冰河湖", "黑沙灘", "極光"],
     gradient: "from-indigo-600 to-purple-400",
     bestSeason: "9–3 月（極光）/ 6–8 月（日照）",
+    lat: 64.96,
+    lng: -19.02,
   },
   {
     slug: "japan-sakura",
@@ -171,6 +177,8 @@ export const trips: Trip[] = [
     highlights: ["目黑川", "新宿御苑", "嵐山", "哲學之道", "吉野山"],
     gradient: "from-pink-500 to-rose-300",
     bestSeason: "3 月下旬 – 4 月中",
+    lat: 35.01,
+    lng: 135.77,
   },
   {
     slug: "new-zealand",
@@ -186,6 +194,8 @@ export const trips: Trip[] = [
     highlights: ["米佛峽灣", "庫克山", "皇后鎮", "蒂卡波湖", "冰川"],
     gradient: "from-emerald-600 to-teal-400",
     bestSeason: "11–3 月（夏季）",
+    lat: -44.00,
+    lng: 170.48,
   },
   {
     slug: "norway-fjords",
@@ -201,6 +211,8 @@ export const trips: Trip[] = [
     highlights: ["蓋朗厄爾峽灣", "布道石", "奇跡石", "羅弗敦群島", "巨人之舌"],
     gradient: "from-sky-600 to-blue-400",
     bestSeason: "6–8 月",
+    lat: 61.15,
+    lng: 6.75,
   },
   {
     slug: "patagonia",
@@ -216,6 +228,8 @@ export const trips: Trip[] = [
     highlights: ["百內塔", "莫雷諾冰川", "菲茨羅伊峰", "火地島", "企鵝島"],
     gradient: "from-amber-600 to-orange-400",
     bestSeason: "11–3 月（夏季）",
+    lat: -50.34,
+    lng: -72.26,
   },
   {
     slug: "morocco",
@@ -231,6 +245,8 @@ export const trips: Trip[] = [
     highlights: ["舍夫沙萬", "撒哈拉沙漠", "馬拉喀什", "菲斯老城", "艾本哈度"],
     gradient: "from-red-500 to-yellow-400",
     bestSeason: "3–5 月 / 9–11 月",
+    lat: 31.63,
+    lng: -7.98,
   },
   {
     slug: "swiss-alps",
@@ -246,6 +262,8 @@ export const trips: Trip[] = [
     highlights: ["少女峰", "馬特洪峰", "琉森湖", "冰河快車", "因特拉肯"],
     gradient: "from-slate-600 to-zinc-400",
     bestSeason: "6–9 月（夏季）/ 12–3 月（滑雪）",
+    lat: 46.82,
+    lng: 8.23,
   },
   {
     slug: "germany",
@@ -261,6 +279,8 @@ export const trips: Trip[] = [
     highlights: ["新天鵝堡", "黑森林", "慕尼黑", "柏林", "萊茵河谷"],
     gradient: "from-yellow-600 to-amber-400",
     bestSeason: "5–10 月 / 12 月（聖誕市集）",
+    lat: 48.14,
+    lng: 11.58,
   },
   {
     slug: "spain",
@@ -276,6 +296,8 @@ export const trips: Trip[] = [
     highlights: ["聖家堂", "阿爾罕布拉宮", "聖地亞哥朝聖路", "塞維利亞", "聖塞巴斯蒂安"],
     gradient: "from-red-600 to-orange-400",
     bestSeason: "4–6 月 / 9–10 月",
+    lat: 40.42,
+    lng: -3.70,
   },
   {
     slug: "greece",
@@ -291,6 +313,8 @@ export const trips: Trip[] = [
     highlights: ["聖托里尼", "雅典衛城", "米克諾斯", "克里特島", "梅特歐拉"],
     gradient: "from-blue-500 to-cyan-300",
     bestSeason: "5–10 月",
+    lat: 37.97,
+    lng: 23.73,
   },
   {
     slug: "belgium",
@@ -306,6 +330,8 @@ export const trips: Trip[] = [
     highlights: ["布魯日", "布魯塞爾大廣場", "根特", "安特衛普", "比利時巧克力"],
     gradient: "from-amber-500 to-yellow-300",
     bestSeason: "4–10 月",
+    lat: 50.85,
+    lng: 4.35,
   },
   {
     slug: "egypt",
@@ -321,6 +347,8 @@ export const trips: Trip[] = [
     highlights: ["吉薩金字塔", "帝王谷", "盧克索神廟", "阿布辛貝", "尼羅河遊船"],
     gradient: "from-yellow-700 to-amber-500",
     bestSeason: "10–4 月",
+    lat: 29.98,
+    lng: 31.13,
   },
   {
     slug: "russia",
@@ -336,6 +364,8 @@ export const trips: Trip[] = [
     highlights: ["莫斯科紅場", "聖彼得堡冬宮", "貝加爾湖", "西伯利亞鐵路", "金環古城"],
     gradient: "from-red-700 to-blue-500",
     bestSeason: "6–8 月（夏）/ 1–2 月（冬景）",
+    lat: 55.75,
+    lng: 37.62,
   },
   {
     slug: "kenya-safari",
@@ -351,6 +381,8 @@ export const trips: Trip[] = [
     highlights: ["馬賽馬拉", "塞倫蓋蒂", "恩戈羅恩戈羅", "乞力馬扎羅", "大遷徙"],
     gradient: "from-green-700 to-yellow-500",
     bestSeason: "7–10 月（大遷徙）",
+    lat: -1.29,
+    lng: 36.82,
   },
   {
     slug: "portugal",
@@ -366,6 +398,8 @@ export const trips: Trip[] = [
     highlights: ["里斯本", "波爾圖", "辛特拉", "阿爾加維海岸", "馬德拉島"],
     gradient: "from-teal-600 to-emerald-400",
     bestSeason: "4–10 月",
+    lat: 38.72,
+    lng: -9.14,
   },
   {
     slug: "finland",
@@ -381,6 +415,8 @@ export const trips: Trip[] = [
     highlights: ["羅瓦涅米聖誕村", "玻璃穹頂屋", "極光", "破冰船", "赫爾辛基"],
     gradient: "from-indigo-500 to-cyan-300",
     bestSeason: "12–3 月（極光冬景）/ 6–8 月（日不落）",
+    lat: 61.92,
+    lng: 25.75,
   },
   {
     slug: "fiji",
@@ -396,6 +432,8 @@ export const trips: Trip[] = [
     highlights: ["瑪瑪努卡群島", "亞薩瓦群島", "珊瑚礁浮潛", "日落沙灘", "傳統Kava儀式"],
     gradient: "from-cyan-400 to-blue-300",
     bestSeason: "5–11 月（旱季）",
+    lat: -17.71,
+    lng: 177.99,
   },
   {
     slug: "chile",
@@ -411,6 +449,8 @@ export const trips: Trip[] = [
     highlights: ["阿塔卡馬沙漠", "百內國家公園", "復活節島", "瓦爾帕萊索", "星空觀測"],
     gradient: "from-red-500 to-blue-400",
     bestSeason: "11–3 月（夏季）",
+    lat: -33.45,
+    lng: -70.67,
   },
   {
     slug: "bolivia",
@@ -426,6 +466,8 @@ export const trips: Trip[] = [
     highlights: ["烏尤尼鹽湖", "拉巴斯", "的的喀喀湖", "月亮谷", "彩色山谷"],
     gradient: "from-sky-300 to-white",
     bestSeason: "12–3 月（雨季天空之鏡）/ 5–10 月（旱季）",
+    lat: -19.02,
+    lng: -65.26,
   },
   {
     slug: "colombia",
@@ -441,6 +483,8 @@ export const trips: Trip[] = [
     highlights: ["卡塔赫納", "波哥大", "咖啡產區", "彩虹河", "聖安德烈斯島"],
     gradient: "from-yellow-400 to-blue-500",
     bestSeason: "12–3 月 / 7–8 月（旱季）",
+    lat: 4.71,
+    lng: -74.07,
   },
   {
     slug: "argentina",
@@ -456,6 +500,8 @@ export const trips: Trip[] = [
     highlights: ["布宜諾斯艾利斯", "伊瓜蘇瀑布", "莫雷諾冰川", "門多薩酒莊", "烏斯懷亞"],
     gradient: "from-sky-400 to-white",
     bestSeason: "10–4 月",
+    lat: -34.6,
+    lng: -58.38,
   },
   {
     slug: "mexico",
@@ -471,6 +517,8 @@ export const trips: Trip[] = [
     highlights: ["奇琴伊察", "坎昆", "墨西哥城", "瓜納華托", "天然溶井"],
     gradient: "from-green-600 to-red-500",
     bestSeason: "11–4 月（旱季）",
+    lat: 19.43,
+    lng: -99.13,
   },
   {
     slug: "brazil",
@@ -486,6 +534,8 @@ export const trips: Trip[] = [
     highlights: ["里約基督像", "伊瓜蘇瀑布", "亞馬遜雨林", "薩爾瓦多", "聖保羅"],
     gradient: "from-green-500 to-yellow-400",
     bestSeason: "5–9 月（旱季）/ 2 月（嘉年華）",
+    lat: -22.91,
+    lng: -43.17,
   },
   {
     slug: "thailand",
@@ -501,6 +551,8 @@ export const trips: Trip[] = [
     highlights: ["曼谷大皇宮", "清邁古城", "夜市美食", "水上市場", "寺廟巡禮"],
     gradient: "from-yellow-500 to-orange-400",
     bestSeason: "11–2 月",
+    lat: 13.76,
+    lng: 100.5,
   },
   {
     slug: "south-korea",
@@ -516,6 +568,8 @@ export const trips: Trip[] = [
     highlights: ["首爾", "釜山", "景福宮", "明洞", "韓式烤肉"],
     gradient: "from-blue-600 to-red-400",
     bestSeason: "3–5 月 / 9–11 月",
+    lat: 37.57,
+    lng: 126.98,
   },
   {
     slug: "vietnam",
@@ -531,6 +585,8 @@ export const trips: Trip[] = [
     highlights: ["河內老城", "下龍灣", "越南河粉", "還劍湖", "法式建築"],
     gradient: "from-red-600 to-yellow-400",
     bestSeason: "10–4 月",
+    lat: 21.03,
+    lng: 105.85,
   },
   {
     slug: "france",
@@ -546,6 +602,8 @@ export const trips: Trip[] = [
     highlights: ["巴黎鐵塔", "羅浮宮", "凡爾賽宮", "南法", "紅酒產區"],
     gradient: "from-blue-500 to-red-400",
     bestSeason: "4–10 月",
+    lat: 48.86,
+    lng: 2.35,
   },
   {
     slug: "uk",
@@ -561,6 +619,8 @@ export const trips: Trip[] = [
     highlights: ["倫敦", "大英博物館", "大笨鐘", "英式下午茶", "科茲窩"],
     gradient: "from-red-600 to-blue-500",
     bestSeason: "5–9 月",
+    lat: 51.51,
+    lng: -0.13,
   },
   {
     slug: "estonia",
@@ -576,6 +636,8 @@ export const trips: Trip[] = [
     highlights: ["塔林老城", "亞歷山大涅夫斯基大教堂", "市政廳廣場", "Telliskivi創意園區", "波羅的海海岸"],
     gradient: "from-blue-400 to-slate-500",
     bestSeason: "5–9 月",
+    lat: 59.44,
+    lng: 24.75,
   },
   {
     slug: "australia",
@@ -591,6 +653,8 @@ export const trips: Trip[] = [
     highlights: ["悉尼歌劇院", "大洋路", "墨爾本", "珀斯", "塔斯曼尼亞"],
     gradient: "from-yellow-400 to-blue-500",
     bestSeason: "10–4 月（夏季）",
+    lat: -33.87,
+    lng: 151.21,
   },
   {
     slug: "taiwan",
@@ -606,6 +670,8 @@ export const trips: Trip[] = [
     highlights: ["台北101", "夜市", "台中", "宜蘭", "日月潭"],
     gradient: "from-green-500 to-blue-400",
     bestSeason: "全年",
+    lat: 25.03,
+    lng: 121.57,
   },
   {
     slug: "malaysia",
@@ -621,6 +687,8 @@ export const trips: Trip[] = [
     highlights: ["檳城", "吉隆坡", "沙巴", "雙子塔", "娘惹美食"],
     gradient: "from-blue-500 to-yellow-400",
     bestSeason: "3–10 月",
+    lat: 3.14,
+    lng: 101.69,
   },
   {
     slug: "singapore",
@@ -636,6 +704,8 @@ export const trips: Trip[] = [
     highlights: ["濱海灣花園", "金沙酒店", "小販中心", "牛車水", "聖淘沙"],
     gradient: "from-red-500 to-white",
     bestSeason: "全年",
+    lat: 1.35,
+    lng: 103.82,
   },
   {
     slug: "usa",
@@ -651,6 +721,8 @@ export const trips: Trip[] = [
     highlights: ["新奧爾良", "爵士樂", "法國區", "MDRT年會", "美式美食"],
     gradient: "from-blue-600 to-red-500",
     bestSeason: "全年",
+    lat: 29.95,
+    lng: -90.07,
   },
   {
     slug: "cambodia",
@@ -666,6 +738,8 @@ export const trips: Trip[] = [
     highlights: ["吳哥窟", "塔布隆寺", "巴戎寺", "暹粒", "洞里薩湖"],
     gradient: "from-amber-600 to-red-500",
     bestSeason: "11–3 月",
+    lat: 13.36,
+    lng: 103.86,
   },
   {
     slug: "indonesia",
@@ -681,6 +755,8 @@ export const trips: Trip[] = [
     highlights: ["峇里島", "婆羅浮屠", "日惹", "雅加達", "烏布梯田"],
     gradient: "from-red-500 to-white",
     bestSeason: "4–10 月（旱季）",
+    lat: -8.41,
+    lng: 115.19,
   },
   {
     slug: "china",
@@ -696,6 +772,8 @@ export const trips: Trip[] = [
     highlights: ["北京故宮", "成都熊貓", "桂林山水", "三亞海灘", "深圳"],
     gradient: "from-red-600 to-yellow-500",
     bestSeason: "3–5 月 / 9–11 月",
+    lat: 39.91,
+    lng: 116.4,
   },
   {
     slug: "turkey",
@@ -711,6 +789,8 @@ export const trips: Trip[] = [
     highlights: ["卡帕多奇亞", "伊斯坦堡", "棉花堡", "藍色清真寺", "熱氣球"],
     gradient: "from-red-500 to-sky-400",
     bestSeason: "4–6 月 / 9–11 月",
+    lat: 41.01,
+    lng: 28.98,
   },
   {
     slug: "palau",
@@ -726,6 +806,8 @@ export const trips: Trip[] = [
     highlights: ["藍洞", "水母湖", "牛奶湖", "珊瑚礁", "大斷層"],
     gradient: "from-cyan-500 to-blue-600",
     bestSeason: "11–5 月",
+    lat: 7.51,
+    lng: 134.58,
   },
   {
     slug: "maldives",
@@ -741,6 +823,8 @@ export const trips: Trip[] = [
     highlights: ["水上屋", "浮潛", "無邊際泳池", "日落沙灘", "海底餐廳"],
     gradient: "from-cyan-300 to-blue-400",
     bestSeason: "11–4 月",
+    lat: 4.17,
+    lng: 73.51,
   },
   {
     slug: "canada",
@@ -756,6 +840,8 @@ export const trips: Trip[] = [
     highlights: ["多倫多", "尼亞加拉瀑布", "MDRT年會", "楓葉大道", "落基山脈"],
     gradient: "from-red-500 to-white",
     bestSeason: "6–10 月",
+    lat: 43.65,
+    lng: -79.38,
   },
   {
     slug: "jordan",
@@ -771,6 +857,8 @@ export const trips: Trip[] = [
     highlights: ["佩特拉古城", "死海", "瓦迪拉姆", "安曼", "紅海"],
     gradient: "from-rose-600 to-amber-400",
     bestSeason: "3–5 月 / 9–11 月",
+    lat: 30.33,
+    lng: 35.44,
   },
   {
     slug: "doha",
@@ -786,6 +874,8 @@ export const trips: Trip[] = [
     highlights: ["珍珠島", "伊斯蘭藝術博物館", "瓦其夫老市場", "沙漠衝沙", "濱海大道"],
     gradient: "from-purple-600 to-amber-400",
     bestSeason: "11–3 月",
+    lat: 25.29,
+    lng: 51.53,
   },
   {
     slug: "dubai",
@@ -801,6 +891,8 @@ export const trips: Trip[] = [
     highlights: ["哈利法塔", "棕櫚島", "杜拜購物中心", "沙漠衝沙", "朱美拉海灘"],
     gradient: "from-amber-400 to-sky-400",
     bestSeason: "11–3 月",
+    lat: 25.2,
+    lng: 55.27,
   },
   {
     slug: "perth",
@@ -816,6 +908,8 @@ export const trips: Trip[] = [
     highlights: ["羅特尼斯島", "Kings Park", "弗里曼特爾", "尖峰石陣", "印度洋日落"],
     gradient: "from-orange-400 to-blue-400",
     bestSeason: "9–11 月（野花季）",
+    lat: -31.95,
+    lng: 115.86,
   },
   {
     slug: "cebu",
@@ -831,6 +925,8 @@ export const trips: Trip[] = [
     highlights: ["鯨鯊共泳", "卡瓦桑瀑布", "薄荷島", "眼鏡猴", "麥克坦島"],
     gradient: "from-cyan-400 to-green-400",
     bestSeason: "1–5 月（旱季）",
+    lat: 10.31,
+    lng: 123.89,
   },
   {
     slug: "tasmania",
@@ -846,6 +942,8 @@ export const trips: Trip[] = [
     highlights: ["搖籃山", "酒杯灣", "荷巴特", "薰衣草農場", "塔斯曼半島"],
     gradient: "from-emerald-500 to-teal-400",
     bestSeason: "12–2 月（夏季）",
+    lat: -42.88,
+    lng: 147.33,
   },
   {
     slug: "hokkaido",
@@ -861,6 +959,8 @@ export const trips: Trip[] = [
     highlights: ["富良野", "小樽運河", "札幌", "旭川動物園", "登別溫泉"],
     gradient: "from-sky-400 to-purple-400",
     bestSeason: "7–8 月（花季）/ 12–2 月（雪季）",
+    lat: 43.06,
+    lng: 141.35,
   },
   {
     slug: "nagoya",
@@ -876,6 +976,8 @@ export const trips: Trip[] = [
     highlights: ["名古屋城", "熱田神宮", "鰻魚飯", "大須商店街", "白川鄉"],
     gradient: "from-amber-500 to-red-400",
     bestSeason: "3–5 月 / 10–11 月",
+    lat: 35.18,
+    lng: 136.91,
   },
   {
     slug: "osaka",
@@ -891,6 +993,8 @@ export const trips: Trip[] = [
     highlights: ["道頓堀", "大阪城", "心齋橋", "章魚燒", "環球影城"],
     gradient: "from-orange-500 to-red-500",
     bestSeason: "3–5 月 / 10–11 月",
+    lat: 34.69,
+    lng: 135.5,
   },
   {
     slug: "shantou",
@@ -906,6 +1010,8 @@ export const trips: Trip[] = [
     highlights: ["牛肉火鍋", "潮州古城", "功夫茶", "腸粉", "老城騎樓"],
     gradient: "from-red-500 to-orange-400",
     bestSeason: "10–3 月",
+    lat: 23.35,
+    lng: 116.68,
   },
   {
     slug: "fukuoka",
@@ -921,6 +1027,8 @@ export const trips: Trip[] = [
     highlights: ["博多拉麵", "屋台", "太宰府天滿宮", "中洲", "柳川"],
     gradient: "from-red-400 to-pink-400",
     bestSeason: "3–5 月 / 10–11 月",
+    lat: 33.59,
+    lng: 130.4,
   },
   {
     slug: "okinawa",
@@ -936,5 +1044,41 @@ export const trips: Trip[] = [
     highlights: ["美麗海水族館", "萬座毛", "古宇利島", "首里城", "國際通"],
     gradient: "from-cyan-400 to-blue-500",
     bestSeason: "4–10 月",
+    lat: 26.33,
+    lng: 127.8,
+  },
+  {
+    slug: "tonga",
+    title: "湯加看鯨魚",
+    titleEn: "Tonga Whale Swim",
+    region: "大洋洲",
+    country: "湯加",
+    cover: "https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=1200&q=80",
+    description: "全球少數能合法與座頭鯨共泳的地方，南太平洋最純粹的海洋奇遇。",
+    status: "wishlist",
+    days: 7,
+    style: "海洋探險",
+    highlights: ["座頭鯨共泳", "瓦瓦烏群島", "浮潛", "南太平洋", "鯨魚遷徙"],
+    gradient: "from-blue-500 to-cyan-300",
+    bestSeason: "7–10 月（鯨魚季）",
+    lat: -21.21,
+    lng: -175.2,
+  },
+  {
+    slug: "sipadan",
+    title: "詩巴丹潛水",
+    titleEn: "Sipadan Diving",
+    region: "東南亞",
+    country: "馬來西亞",
+    cover: "https://images.unsplash.com/photo-1591025207163-942350e47db2?auto=format&fit=crop&w=1200&q=80",
+    description: "世界十大潛點之一，海龜風暴、傑克魚旋風、峭壁深潛，潛水人的朝聖地。",
+    status: "completed",
+    days: 5,
+    style: "潛水探險",
+    highlights: ["海龜風暴", "傑克魚旋風", "峭壁潛水", "珊瑚花園", "仙本那"],
+    gradient: "from-teal-500 to-blue-600",
+    bestSeason: "4–12 月",
+    lat: 4.11,
+    lng: 118.63,
   },
 ];
