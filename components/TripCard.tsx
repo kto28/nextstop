@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Trip } from "@/lib/trips";
+import { WeatherBadge } from "./WeatherBadge";
 
 const statusConfig = {
   planned: { label: "已規劃", color: "bg-blue-500", icon: "📋" },
@@ -33,8 +34,9 @@ export function TripCard({ trip, index }: { trip: Trip; index: number }) {
           </span>
         </div>
 
-        {/* Days Badge */}
-        <div className="absolute top-4 right-4">
+        {/* Days Badge + Weather */}
+        <div className="absolute top-4 right-4 flex items-center gap-1.5">
+          <WeatherBadge lat={trip.lat} lng={trip.lng} compact />
           <span className="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">
             {trip.days} 天
           </span>

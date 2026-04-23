@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Trip } from "@/lib/trips";
+import { fetchWeather } from "@/lib/weather";
 
 const statusColors: Record<string, string> = {
   completed: "#10b981",
@@ -76,15 +77,31 @@ export function WorldMap({ trips }: { trips: Trip[] }) {
 
         const marker = L.marker([trip.lat, trip.lng], { icon }).addTo(map);
 
+        const weatherId = `wx-${trip.slug}`;
         marker.bindPopup(
-          `<div style="text-align:center;min-width:120px;">
+          `<div style="text-align:center;min-width:140px;">
             <div style="font-weight:700;font-size:14px;margin-bottom:2px;">${trip.title}</div>
             <div style="font-size:11px;opacity:0.7;margin-bottom:4px;">${trip.titleEn}</div>
             <div style="font-size:11px;color:${color};font-weight:600;">${statusLabels[trip.status]} · ${trip.days}天</div>
             <div style="font-size:10px;opacity:0.5;margin-top:2px;">${trip.country}</div>
+            <div id="${weatherId}" style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(0,0,0,0.08);font-size:12px;min-height:20px;">
+              <span style="opacity:0.4;font-size:10px;">載入天氣···</span>
+            </div>
           </div>`,
           { closeButton: false, className: "map-popup" }
         );
+
+        marker.on("popupopen", async () => {
+          const el = document.getElementById(weatherId);
+          if (!el) return;
+          const weather = await fetchWeather(trip.lat, trip.lng);
+          if (!el) return;
+          if (weather) {
+            el.innerHTML = `<span style="font-size:16px;">${weather.icon}</span> <strong>${weather.temp}°C</strong> <span style="opacity:0.6;">${weather.desc}</span>`;
+          } else {
+            el.innerHTML = `<span style="opacity:0.4;font-size:10px;">天氣資料暫不可用</span>`;
+          }
+        });
       });
 
       mapInstanceRef.current = map;
